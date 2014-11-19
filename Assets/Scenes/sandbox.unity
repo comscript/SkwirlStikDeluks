@@ -6467,8 +6467,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400004, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1138862614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .712520003, z: .115740001}
+  m_LocalRotation: {x: .145600647, y: 0, z: 0, w: .989343464}
+  m_LocalPosition: {x: 0, y: 1.00670004, z: -1.30929983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2054016195}
@@ -9863,6 +9863,14 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f4d7749b455891647b85cd7d0b249eed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_RootGameObject: {fileID: 1761895461}
@@ -10308,6 +10316,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1761895462}
   - 95: {fileID: 1761895463}
+  - 114: {fileID: 1761895464}
   m_Layer: 0
   m_Name: unitychan
   m_TagString: Untagged
@@ -10339,12 +10348,24 @@ Animator:
   m_GameObject: {fileID: 1761895461}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4d7749b455891647b85cd7d0b249eed, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1761895464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761895461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3f5a2b97e9c3e4b99446f6936ff509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &1765468485
 GameObject:
   m_ObjectHideFlags: 0
@@ -11030,6 +11051,7 @@ GameObject:
   - 4: {fileID: 1915096821}
   - 95: {fileID: 1915096822}
   - 136: {fileID: 1915096823}
+  - 114: {fileID: 1915096824}
   m_Layer: 0
   m_Name: unitychan
   m_TagString: Untagged
@@ -11061,7 +11083,7 @@ Animator:
   m_GameObject: {fileID: 1915096820}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4d7749b455891647b85cd7d0b249eed, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -11080,6 +11102,18 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: .75, z: 0}
+--- !u!114 &1915096824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1915096820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3f5a2b97e9c3e4b99446f6936ff509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &1924722138
 GameObject:
   m_ObjectHideFlags: 0
@@ -11764,6 +11798,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f4d7749b455891647b85cd7d0b249eed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
   m_RootGameObject: {fileID: 1915096820}
@@ -12070,9 +12108,9 @@ MonoBehaviour:
   canControl: 1
   useFixedUpdate: 1
   movement:
-    maxForwardSpeed: 6
-    maxSidewaysSpeed: 6
-    maxBackwardsSpeed: 6
+    maxForwardSpeed: 2
+    maxSidewaysSpeed: 2
+    maxBackwardsSpeed: 2
     slopeSpeedMultiplier:
       serializedVersion: 2
       m_Curve:
